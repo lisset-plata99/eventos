@@ -65,7 +65,7 @@
 <!--/ header-->
 
 <!-- bradcam_area  -->
-<div class="text-center bradcam_bg overlay3" style="background-image: url('../img/noticias.jpg');">
+<div class="bradcam_area text-center overlay3" style="background-image: url('../img/noticias.jpg');">
 	<div class="bradcam_text">
 		<h3>Noticias</h3>
 	</div>
