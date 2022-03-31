@@ -9,22 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/gijgo.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/responsive.css"> -->
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo-img">
                                 <a href="index.html">
-                                    <!-- <img src="img/logo.png" alt=""> -->
+                                    <!-- <img src="../img/logo.png" alt=""> -->
                                 </a>
                             </div>
                         </div>
@@ -49,9 +49,9 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Inicio</a></li>
+                                        <li><a href="../">Inicio</a></li>
                                         <li><a href="story.html">Administracion</a></li>
-                                        <li><a href="Gallery.html">Invitacion</a></li>
+                                        <li><a class="active" href="../verInvitacion/1">Invitacion</a></li>
                                        
                                     </ul>
                                 </nav>
@@ -69,14 +69,15 @@
 
     <!-- slider_area -->
     <div class="slider_area ">
-        <div class="slider_area_inner slider_bg_1 overlay2">
+        <div class="slider_area_inner overlay2" style="background-image: url('{{$infoInvitacion->Imagen}}');">
             <div class="slider_text text-center">
                 <div class="text_inner">
-                    <img src="img/banner/ornaments.png" alt="">
-                    <h4>14 Jan 2020</h4>
-                    <h3>Anjelina & Jack <br>
-                        Wedding Ceremony</h3>
-                    <span>Get Married</span>
+                    <img src="../img/banner/ornaments.png" alt="">
+                    <h4>{{$infoInvitacion->Dia}} / {{$infoInvitacion->Mes}} / {{$infoInvitacion->Año}}</h4>
+                    <h3>{{$infoInvitacion->Nombre}} {{$infoInvitacion->Apellido}}</h3>
+                    <span>{{$infoInvitacion->Descripcion}}</span>
+                    <br>
+                    <span>Maximos de invitados : {{$infoInvitacion->NumeroInvitados}}</span>
                 </div>
             </div>
         </div>
@@ -89,74 +90,44 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title text-center">
-                        <img src="img/banner/flowers.png" alt="">
+                        <img src="../img/banner/flowers.png" alt="">
                         <h3>MENUS</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="single_lover_story text-center">
-                        <!-- <div class="story_thumb">
-                            <img src="img/story/1.png" alt="">
+            <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="weding_time_line text-center">
+                        <div class="single_time_line">
+                            <h3>Crema</h3>
+                            <p>{{$infoInvitacion->Crema}}</p>
                         </div>
-                        <span>Groom</span>
-                        <h3>Jack Wonner</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some content of a page when looking at its layout. The point of using Lorem
-                            Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                            Content here content here, making it look like readable English. Many desktop publishing
-                            packages and web page editors now use.</p>
-                        <div class="social_links">
-                            <ul>
-                                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                            </ul>
-                        </div> -->
+                        <div class="single_time_line">
+                            <h3>Guarnicion</h3>
+                            <p>{{$infoInvitacion->Guarnicion}}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="weding_time_line text-center">
+                        <div class="single_time_line">
+                            <h3>Pastas</h3>
+                            <p>{{$infoInvitacion->Pastas}}</p>
+                        </div>
+                        <div class="single_time_line">
+                            <h3>Platillo</h3>
+                            <p>{{$infoInvitacion->Platillo}}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="weding_time_line text-center">
                         <div class="single_time_line">
-                            <h3>Fast Meet</h3>
-                            <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration in some.</p>
+                            <h3>Bebida</h3>
+                            <p>{{$infoInvitacion->Bebida}}</p>
                         </div>
-                        <div class="single_time_line">
-                            <h3>He Proposed</h3>
-                            <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration in some.</p>
-                        </div>
-                        <div class="single_time_line">
-                            <h3>Love Story</h3>
-                            <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration in some.</p>
-                        </div>
-                        <div class="single_time_line">
-                            <h3>Wedding Day</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single_lover_story text-center">
-                        <!-- <div class="story_thumb">
-                            <img src="img/story/2.png" alt="">
-                        </div>
-                        <span>Bride</span>
-                        <h3>Anjelina Kona</h3>
-                        <p>Many variations of passages of Lorem Ipsum available, but the majority have suffered
-                            alteration in some content of a page when looking at its layout. The point of using Lorem
-                            Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                            Content here content here, making it look like readable English. Many desktop publishing
-                            packages and web page editors now use.</p>
-                        <div class="social_links">
-                            <ul>
-                                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                            </ul>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -184,34 +155,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- footer_end -->
 
     <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/gijgo.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
+    <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../js/ajax-form.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/scrollIt.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/nice-select.min.js"></script>
+    <script src="../js/gijgo.min.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/plugins.js"></script>
 
     <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/jquery.form.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/mail-script.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 
     <script>
         $('#clock').countdown('2020/01/07', function (event) {
@@ -240,7 +211,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo-img">
                                 <a href="index.html">
-                                    <!-- <img src="img/logo.png" alt=""> -->
+                                    <!-- <img src="../img/logo.png" alt=""> -->
                                 </a>
                             </div>
                         </div>

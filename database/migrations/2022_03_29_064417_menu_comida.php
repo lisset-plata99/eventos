@@ -16,7 +16,11 @@ return new class extends Migration
         //
         Schema::create('MenuComida', function (Blueprint $table) {
             $table->id();
-            $table->string('DescripcionPlatillos');
+            $table->string('Crema');
+            $table->string('Pastas');
+            $table->string('Guarnicion');
+            $table->string('Platillo');
+            $table->string('Bebida');
             $table->integer('Precio');
             $table->timestamps();
         });
