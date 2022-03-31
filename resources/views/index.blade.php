@@ -49,7 +49,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Inicio</a></li>
+                                        <li><a class="active" href="../">Inicio</a></li>
                                         <li><a href="../verInvitacion/1">Invitacion</a></li>
                                         <li><a href="../noticias">Noticias</a></li>
                                     </ul>
