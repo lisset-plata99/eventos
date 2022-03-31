@@ -65,7 +65,7 @@
 <!--/ header-->
 
 <!-- bradcam_area  -->
-<div class="text-center bradcam_bg overlay3" style="background-image: url('../css/noticias.jpg');">
+<div class="text-center bradcam_bg overlay3" style="background-image: url('../img/noticias.jpg');">
 	<div class="bradcam_text">
 		<h3>Noticias</h3>
 	</div>
@@ -79,7 +79,7 @@
 				<h3 class="mb-30">Left Aligned</h3>
 				<div class="row">
 					<div class="col-md-3">
-						<img src="../css/elements/d.jpg" alt="" class="img-fluid">
+						<img src="../img/elements/d.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="col-md-9 mt-sm-20">
 						<p>Recently, the US Federal government banned online casinos from operating in America by making
@@ -122,7 +122,7 @@
 							talk a little about what symptoms</p>
 					</div>
 					<div class="col-md-3">
-						<img src="../css/elements/d.jpg" alt="" class="img-fluid">
+						<img src="../img/elements/d.jpg" alt="" class="img-fluid">
 					</div>
 				</div>
 			</div>
