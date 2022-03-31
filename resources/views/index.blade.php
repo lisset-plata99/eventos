@@ -50,7 +50,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="index.html">Inicio</a></li>
-                                        <li><a href="story.html">Administracion</a></li>
+                                        <li><a href="../noticias">Noticias</a></li>
                                         <li><a href="../verInvitacion/1">Invitacion</a></li>
                                     </ul>
                                 </nav>

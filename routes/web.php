@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {return view('index');});
+Route::get('/noticias', function () {return view('noticias');});
 // Route::get('/', function () {return view('welcome');});
 Route::get('/verInvitacion/{id}',[agendaeventosController::class,'mostrarInvitacion'])->name('ver.Invitacion');
