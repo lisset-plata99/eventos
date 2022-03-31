@@ -77,9 +77,6 @@
 <?php
                         $url = "https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=QcIfqTH4BfZ8AhE9c3PqYeNe5evlSlaf";
                         $data = json_decode(file_get_contents($url));
-						// echo $data-> results[0]->title;
-						// echo $data-> results[0]->abstract;
-						// echo $data-> results[0]->multimedia[0]->url;
                         ?>
 
 	<div class="whole-wrap">
